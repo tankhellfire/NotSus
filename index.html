@@ -1,19 +1,27 @@
-<html><body>
+<html>
+<head>
 
 <meta property="og:image" content="https://cdn.discordapp.com/attachments/1144206619828297740/1151843374668726282/Untitled.png"/>
 
+</head>
+<body>
 <script>
+
 fetch('https://jsonip.com/')
 .then((resp) => resp.json())
 .then((ip) => {
 
 	document.getElementById("fun").innerHTML='<span>'+ip.ip+'</span>';
 
-});</script>
+});
+
+</script>
 
 <div id='fun'>
 <img width='973' height='252'
-src="https://cdn.discordapp.com/attachments/1144206619828297740/1151843374668726282/Untitled.png"></img>
+src="https://cdn.discordapp.com/attachments/1144206619828297740/1151843374668726282/Untitled.png">
+</img>
 </div>
 
-</body></html>
+</body>
+</html>
