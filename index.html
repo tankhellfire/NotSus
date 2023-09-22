@@ -1,32 +1,15 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Laser GitHub Pages Website</title>
   <script>
-// Get the page request URL
-const requestUrl = window.location.href;
+    // Get the page request URL
+    const requestUrl = window.location.href;
+    console.error(requestUrl);
 
-// Get the laser target element
-const laserTargetElement = document.querySelector('#laser-target');
+    // Get the laser target element
+    const laserTargetElement = document.querySelector('#laser-target');
+    console.error(laserTargetElement);
 
-// Send a GET request to the laser API
-const laserApiRequest = new XMLHttpRequest();
-laserApiRequest.open('GET', 'https://api.laser.com/laser?target=' + requestUrl);
-laserApiRequest.send();
-
-// Listen for the laser API response
-laserApiRequest.onload = function() {
-  if (laserApiRequest.status === 200) {
-    // The laser API request was successful
-    const laserApiResponse = JSON.parse(laserApiRequest.responseText);
-
-    // Laser the target element
-    laserTargetElement.style.backgroundColor = laserApiResponse.color;
-  } else {
-    // The laser API request failed
-    console.error('Laser API request failed:', laserApiRequest);
-  }
-};
   </script>
 </head>
 <body>
