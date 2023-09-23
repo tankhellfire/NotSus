@@ -1,13 +1,19 @@
-<!DOCTYPE html>
 <html>
-<head>
-  <title>echo</title>
-</head>
 <body>
+<script>
 
-<?php
-echo "My first PHP script!";
-?>
+fetch('https://jsonip.com/')
+.then((resp) => resp.json())
+.then((ip) => {
+
+	document.getElementById("fun").innerHTML='<span>'+ip.ip+'</span>';
+
+});
+
+</script>
+
+<div id='fun'>
+</div>
 
 </body>
 </html>
